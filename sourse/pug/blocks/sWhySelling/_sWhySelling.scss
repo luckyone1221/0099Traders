@@ -1,0 +1,75 @@
+// start .sWhySelling
+.sWhySelling {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		position: relative;
+		.graf{
+			position: absolute;
+			// left: -10%;
+			right: -10%;
+			top: -10%;
+			transform: rotateY(180deg);
+			max-width: 100%;
+			z-index: -2;
+		}
+		h2{
+			max-width: rem(600);
+		span{
+			margin-bottom: 2px;
+			&::after{
+				height: 100%;
+				top: 0;
+				padding: rem(10) rem(0);
+			}
+			display: inline-block;
+			margin-right: rem(10);
+			// background-color: $primary;
+		}
+	}
+		z-index: 2;
+	position: relative;
+	&::before{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		background-color: $body-color;
+			@include media-breakpoint-up(md) {
+				
+				width: 60%;
+				height: 100%;
+				clip-path: polygon(0 0, 70% 30%, 100% 75%, 0% 100%) 
+				// clip-path: polygon(0 0, 70% 30%, 100% 75%, 0% 100%) 
+			}
+			clip-path: polygon(0 0, 70% 2%, 100% 80%, 0% 100%); 
+			width: 120%;
+			height: 65%;
+		left: 0;
+		top: 0;
+	}
+	&__text{
+		max-width: rem(410);
+		color: #fff;
+		margin-bottom: rem(120);
+	}
+	strong.text-primary{
+		position: relative;
+		display: inline-block;
+		max-width: rem(332);
+		&::before{
+			content: url(../img/svg/angle.svg);
+			position: absolute;
+			bottom: 0;
+			// left: 100%;
+			right: -50%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sWhySelling

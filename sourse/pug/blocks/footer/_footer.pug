@@ -1,9 +1,42 @@
 mixin footer()
-	+b.FOOTER.footer
+	+b.FOOTER.footer.section
 		.container
 			.row
+				.col-xl-4.col-md-auto
+					p 2021 ИП Шумилова М. В.
+					p ИНН: 7839141703
+					p ОГРН: 316183200118945
+					p Тел.: 
+						a.text-body(href="tel:+7(499)450-70-51") +7 (499) 450-70-51
+					p E-mail: 
+						a.text-body(href="mailto:support@digitalproduct.ru") support@digitalproduct.ru
 				.col
-					
-				.col
-				.col
-				.col-auto
+					+e.small Принимаем к оплате:
+					.row.g-3.pb-3
+						.col-auto
+							+pic("pay-1.png",'',0)
+							
+						.col-auto
+							+pic("pay-2.png",'',0)
+						.col-auto
+							+pic("pay-3.png",'',0)
+					+e.small Платеж защищен
+					.row.g-3
+						.col-auto
+							+pic("pay-4.png",'',0)
+							
+						.col-auto
+							+pic("pay-5.png",'',0)
+						.col-auto
+							+pic("pay-6.png",'',0)
+						.col-auto
+							+pic("pay-7.png",'',0)
+
+				.col-xl-3.col-md-auto
+					ul
+						li: a(href="#")  Политика конфиденциальности
+						li: a(href="#")  Оферта
+						li: a(href="#")  Отменить подписку
+						li: a(href="#")  Политика обработки данных
+						li: a(href="#")  О продукте
+						li: a(href="#")  Тарифы

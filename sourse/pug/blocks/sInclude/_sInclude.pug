@@ -1,0 +1,27 @@
+mixin sInclude(data)
+	// start sInclude
+	+b.SECTION.sInclude.section#sInclude&attributes(attributes)
+		.container
+			+b.section-title 
+				h2 Что конкретно включает в&nbsp;себя #[span MasterTrade?] <br> Когда я&nbsp;получу доступ?
+				
+			+e.row-card.row
+				mixin card()
+					+e.col-card.col-md-6
+						+e.card
+							block
+				+card(``)
+					p Сразу&nbsp;же после оформления подписки (оплаты) Вам откроется доступ  к&nbsp;#[a(href="#") личному кабинету]
+				+card(``)
+					p Занятия будут открываться постепенно, полный курс обучения&nbsp;расчитан на&nbsp;30&nbsp;дней
+			+e.row-card.row
+				mixin item(i,t)
+					+e.col.col-lg-3.col-sm-6
+						img(src=`img/svg/sInclude-${i}.svg` loading="lazy", alt="")
+						p!= t
+				+item(`1`,`Самое мощное средство автоматизации заработка за&nbsp;последние 17&nbsp;лет`)
+				+item(`2`,`19&nbsp;исчерпывающих  занятий в&nbsp;видеоформате`)
+				+item(`3`,`Описание всех правил работы и&nbsp;памятки в&nbsp;PDF, которые можно распечатать`)
+				+item(`4`,`Бесценные правила  и&nbsp;советы, следуя которым слить депозит будет невозможно`)
+			+e.btn(href="#") Показать полную программу →
+	// end sInclude

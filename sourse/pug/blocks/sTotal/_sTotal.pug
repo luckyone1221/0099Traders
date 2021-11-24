@@ -1,0 +1,23 @@
+mixin sTotal(data)
+	// start sTotal
+	+b.SECTION.sTotal.section#sTotal&attributes(attributes)
+		.container
+			+b.section-title
+				h2 В итоге #[span вы получаете]
+				
+			.row
+				mixin item(i,t,p)
+					+e.col.col-md-6 
+						+e.item.bg-wrap
+							+pic(`total-${i}.jpg`,'bg',0).picture-bg
+							img(src=`img/svg/total-i-${i}.svg` loading="lazy", alt="").icon-img
+							+e.text
+								+e.title!= t
+								p!= p
+							
+				+item(`1`,`Спокойные и&nbsp;уверенные сделки`,`При этом на&nbsp;торговлю&nbsp;Вы тратите в&nbsp;разы меньше времени`)
+				+item(`2`,`Вытягиваете максимум `,`из&nbsp;сделок (робот за&nbsp;Вас &laquo;ловит&raquo; самые выгодные точки входа)`)
+				+item(`3`,`Полный  контроль `,`над всеми  операциями  робота `)
+				+item(`4`,`Освобождаете 90% времени`,`Вам не&nbsp;нужно постоянно смотреть в&nbsp;графики`)
+			a.btn.btn-outline-primary(href="#") Узнать подробнее о стратегиях
+	// end sTotal

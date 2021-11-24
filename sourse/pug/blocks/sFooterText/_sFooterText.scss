@@ -1,0 +1,53 @@
+// start .sFooterText
+.sFooterText {
+		--sPT: 200px;
+		// --sPB: ;
+		// --sTPB: ;
+	h2{
+		@include rfs(60px);
+		margin-bottom: .6em;
+		span{
+			display: inline-block;
+			background: #FF2171;
+			padding: em(0) em(5);
+			margin-left: em(-5);
+		}
+	}
+	img{
+		margin-bottom: 2rem;
+	}
+	p{
+		max-width: rem(880);
+		
+	}
+	&__footer-block{
+		background: rgba($color: #9E9E9E, $alpha: .1);
+		// opacity: 0.1;
+		border-radius: 10px;
+		padding: rem(40);
+		margin-top: rem(50);
+		.row{
+			align-items: center;
+		}
+		p{
+			max-width: rem(380);
+			font-size: rem(16);
+		}
+	}
+	&__footer-block-inner{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(1220 - 208)
+	}
+	&__btn{
+		@extend .btn, .btn-outline-primary;
+		width: rem(312);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFooterText

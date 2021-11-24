@@ -7,6 +7,11 @@ include ../blocks/sBored/_sBored.pug
 include ../blocks/sLucky/_sLucky.pug
 include ../blocks/sHow/_sHow.pug
 include ../blocks/sImpossible/_sImpossible.pug
+include ../blocks/sFooterText/_sFooterText.pug
+include ../blocks/sInclude/_sInclude.pug
+include ../blocks/sWhySelling/_sWhySelling.pug
+include ../blocks/sTotal/_sTotal.pug
+include ../blocks/sHowWork/_sHowWork.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -25,6 +30,12 @@ block pagecontent
 	+sLucky()
 	+sHow()
 	+sImpossible()
-	+sForm()
-	+sContact()
+	//- +sForm()
+	//- +sContact()
+	+sHowWork
+	+sTotal
+	+sWhySelling
+	+sInclude
+	+headerBlock2
+	+sFooterText
 	+footer()

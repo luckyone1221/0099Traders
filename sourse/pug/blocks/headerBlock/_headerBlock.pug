@@ -1,3 +1,34 @@
+mixin formhead()
+	+form-wrap
+		+input('Ваш E-mail', 'email')
+		+e.row.row.gy-4
+			.col-sm-auto
+				+e.btn(type="submit") Получить доступ
+			.col-sm
+				+e.sub-row.row
+					.col-auto
+						+e.LABEL.chb
+							input(class="invisible" type="checkbox" checked)
+							.square
+								//-checked
+					.col
+						+e.policy
+							| Нажимая кнопку "Оплатить" Вы даете согласие на
+							|
+							a(href="#") обработку персональных данных
+							| , а также подтверждаете ознакомление с
+							|
+							a(href="#") публичной офертой
+							|
+							| и автоматическими списаниями.
+							|
+							span Первое списание в размере 889 рублей
+							|
+							| через 72 часа после подписки и далее, согласно
+							|
+							a(href="#") тарифу
+							|
+							| раз в 7 дней 889 рублей
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
@@ -28,36 +59,42 @@ mixin headerBlock()
 									+e.timer
 										.time__block
 											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='325')
-					+form-wrap
-						+input('Ваш E-mail', 'email')
-						+e.row.row.gy-4
-							.col-sm-auto
-								+e.btn(type="submit") Получить доступ
-							.col-sm
-								+e.sub-row.row
-									.col-auto
-										+e.LABEL.chb
-											input(type="checkbox" class="invisible" checked)
-											.square
-												//-checked
-									.col
-										+e.policy
-											| Нажимая кнопку "Оплатить" Вы даете согласие на
-											|
-											a(href="#") обработку персональных данных
-											| , а также подтверждаете ознакомление с
-											|
-											a(href="#") публичной офертой
-											|
-											| и автоматическими списаниями.
-											|
-											span Первое списание в размере 889 рублей
-											|
-											| через 72 часа после подписки и далее, согласно
-											|
-											a(href="#") тарифу
-											|
-											| раз в 7 дней 889 рублей
+					+formhead()
+				+e.book-col.col-lg-4.col-xl-5.d-none.d-lg-block
+					+pic('headerBlock-book.png')(class="headerBlock__book")
+	// end headerBlock
+	
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--stock.section#headerBlock&attributes(attributes)
+		//- +e.bg-img--left
+		//- 	//- img(loading="lazy" src="img/svg/headerBlock-bg-img-left.svg" alt="")
+		//- +e.bg-img--right.d-none.d-lg-flex
+		//- 	//- img(loading="lazy" src="img/svg/headerBlock-bg-img-right.svg" alt="")
+		.container
+			+b.section-title
+				h2 Акция!!!
+			//+pic('headerBlock-book.png')(class="headerBlock__book d-lg-none")
+			+e.main-row.row
+				.col-lg-8.col-xl-7
+					+e.mob-row.row
+						.col-sm-5.col-md-auto.d-lg-none
+							+pic('headerBlock-book.png')(class="headerBlock__book")
+						.col-sm-7.col-md
+							+e.row.row.gy-2.gy-md-5
+								.col-auto
+									+e.discount
+										+e.d-text Только сегодня  <br> доступ всего за
+										+e.price 29₽
+										+e.old-price
+											span вместо
+											span 2 990 ₽
+								+e.timer-col.col-lg
+									+e.title Увасесть 15 минут, чтобы получить «MasterTradePRO 2.0» по скидке 99%
+									+e.timer
+										.time__block
+											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='325')
+					+formhead()
 				+e.book-col.col-lg-4.col-xl-5.d-none.d-lg-block
 					+pic('headerBlock-book.png')(class="headerBlock__book")
 	// end headerBlock

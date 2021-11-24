@@ -1,7 +1,22 @@
 .footer {
-		
+		--sPT: #{rem(80)};
+		--sPB: #{rem(60)};
 	margin-top: auto;
-
+	.row{
+		--bs-gutter-y: 30px;
+	}
+	li{
+		font-size: 11px;
+		list-style: none;
+	}
+	&__small{
+		font-size: 11px;
+		opacity: 0.5;
+		margin-bottom: 11px;
+	}
+	p{
+		margin-bottom: 10px;
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

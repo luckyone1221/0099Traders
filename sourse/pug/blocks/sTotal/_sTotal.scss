@@ -1,0 +1,63 @@
+// start .sTotal
+.sTotal {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(80)};
+
+		h2{ 
+		span{ 
+			&::after{
+				height: 100%;
+				top: 0;
+				padding: rem(10) rem(0);
+			}
+			display: inline-block;
+			margin-right: rem(10);
+			// background-color: $primary;
+		}
+	}
+	.row{
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__item{
+		min-height: 100%;
+		color: #fff;
+		padding: rem(30);
+		padding-left: rem(122);
+		@include media-breakpoint-up(xl) {	
+			padding: rem(60);
+			padding-left: rem(132);
+		}
+		.icon-img{
+			position: absolute;
+				@include media-breakpoint-up(xl) {
+
+					left: rem(32);
+					top: rem(32);
+				}
+				left: rem(16);
+				top: rem(16);
+			width: auto;
+		}
+	}
+	&__text{
+		margin-left: auto;
+		max-width: rem(260);
+	}
+	&__title{
+		font-size: rem(24);
+		margin-bottom: rem(20);
+		font-weight: bold;
+	}
+	.btn{
+		margin-top: rem(72);
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTotal

@@ -12,6 +12,7 @@ include ../blocks/sInclude/_sInclude.pug
 include ../blocks/sWhySelling/_sWhySelling.pug
 include ../blocks/sTotal/_sTotal.pug
 include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sRew/_sRew.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -32,6 +33,7 @@ block pagecontent
 	+sImpossible()
 	//- +sForm()
 	//- +sContact()
+	+sRew
 	+sHowWork
 	+sTotal
 	+sWhySelling

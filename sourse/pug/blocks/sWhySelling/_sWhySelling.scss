@@ -33,7 +33,7 @@
 		content: '';
 		position: absolute;
 		z-index: -1;
-		background-color: $body-color;
+	background: #151515;
 			@include media-breakpoint-up(md) {
 				
 				width: 60%;

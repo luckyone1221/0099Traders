@@ -1,0 +1,19 @@
+mixin sHow(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		.container
+			+b.section-title
+				h2 «Как этого добиться?» — спросите Вы
+			+e.row.row
+				+sHowItem('с помощью моего 17-летнего опыта на рынке FOREX, упакованного в обучающую систему MasterTrade Pro 2.0')(data-pink="Отвечу просто ")
+				+sHowItem('Вы не тратите время на изучение теории, эксперименты и попытки разобраться самому')(data-pink="Еще проще ")
+				+sHowItem('Просто забираете мою систему (пошаговый обучающий курс + 4 автоматические стратегии) и, строго следуя инструкциям, начинаете кратно умножать свой депозит')
+				.col-lg-4.mx-auto
+					+e.btn(href="#") Попробовать
+				//-
+	// end sHow
+
+mixin sHowItem(txt)
+	.col-lg-4
+		+e.item&attributes(attributes)
+			+e.txt=txt

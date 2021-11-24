@@ -1,0 +1,31 @@
+mixin sLucky(data)
+	// start sLucky
+	+b.SECTION.sLucky.section#sLucky&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Но сегодня ВАШ счастливый день! Удача улыбнулась именно&#160;Вам!
+			+e.row.row.gy-3
+				+e.col--descr.col-sm-auto
+					p Расслабьтесь на несколько секунд и просто помечтайте
+				+e.col--arrows.col-sm
+					+arrow()
+			+e.slider-wrap
+				.container
+					.swiper.sLucky-slider-js
+						.swiper-wrapper
+							+sLuckySlide(1, 'Все ваши долги и кредиты — в прошлом', 'Они полностью закрыты')
+							+sLuckySlide(2, 'Вы посещаете новые страны', 'Путешествуете так часто, как Вам этого хочется')
+							+sLuckySlide(3, 'Работаете тогда, когда хотите', 'Там, где Вам удобно. С ноутбука или даже смартфона')
+							+sLuckySlide(4, 'У Вас престижный автомобиль')
+							+sLuckySlide(5, 'Вы живете в большой квартире или доме своей мечты')
+							+sLuckySlide(6, 'У Вас накоплена внушительная финансовая «подушка»')
+							+sLuckySlide(7, 'Ваша жизнь наконец принадлежит Вам!')
+
+	// end sLucky
+
+mixin sLuckySlide(imgNum, title, pink="Они полностью закрыты")
+	.swiper-slide
+		+e.item
+			+pic(`sLucky-${imgNum}.png`)(class="sLucky__img")
+			+e.title=title
+			+e.pink=pink

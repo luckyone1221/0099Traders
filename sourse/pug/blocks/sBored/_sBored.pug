@@ -1,0 +1,38 @@
+mixin sBored(data)
+	// start sBored
+	+b.SECTION.sBored.section#sBored&attributes(attributes)
+		//-+e.bg
+			img(loading="lazy" src="img/@2x/sBored-img.png" alt="")
+		+e.container.container
+			+pic('sBored-img2.png')(class="sBored__bg")
+			+e.row.row
+				.col-xl-5
+					+b.section-title--top
+						h2
+							| Скажите, Вам самим это еще
+							|
+							span не надоело?
+				.col-xl-7
+					+e.items
+						+sBoredItem(1, 'Нелюбимая работа', 'которая не приносит нужного дохода')
+						+sBoredItem(2, 'Постоянная нехватка денег ', 'и вынужденные ограничения')
+						+sBoredItem(3, 'Никакой перспективы ', 'зарабатывать в будущем в 2, 5 … 10 раз больше')
+				.col-xl-7.ms-auto
+					+b.section-title--bot
+						h2
+							| А быть может, Вы&#160;уже пробовали трейдинг и
+							|
+							span ОБОЖГЛИСЬ?
+						p Понимаю! За 17+ лет на рынке FOREX я видел сотни новичков, которые потеряли всё…
+
+
+	// end sBored
+
+mixin sBoredItem(imgNum, title, descr)
+	+e.item
+		+e.item-row.row
+			.col-auto
+				+pic(`sBored-${imgNum}.png`)(class="sBored__img")
+			.col
+				+e.title=title
+				+e.descr=descr

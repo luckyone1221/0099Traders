@@ -11,64 +11,471 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="index.png">
 		<div class="main-wrapper">
 			<!-- start header-->
-			<header class="header" id="header">
+			<header class="header header--js" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="top-nav__container container">
+						<div class="top-nav__row row align-items-center">
+							<div class="col">
+								<a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__btn" href="#">&#160;Войти&#160;
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-							</div>
-						</div>
-						<div class="col">
-							<div class="menu-mobile menu-mobile--js">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-								</div>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
-			<div class="container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">1</div>
-					<div class="swiper-slide">2</div>
-					<div class="swiper-slide">3</div>
-				</div>
-			</div>
+			<!--+topLine()-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
+				<div class="headerBlock__bg-img headerBlock__bg-img--left"><img loading="lazy" src="img/svg/headerBlock-bg-img-left.svg" alt=""/>
+				</div>
+				<div class="headerBlock__bg-img headerBlock__bg-img--right d-none d-lg-flex"><img loading="lazy" src="img/svg/headerBlock-bg-img-right.svg" alt=""/>
+				</div>
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+					<div class="section-title">
+						<h1>Начните зарабатывать на&#160;FOREX сегодня</h1>
+						<p>MasterTrade PRO 2.0 — это автоматический робот, который увеличивает Ваш депозит в десятки раз за год без заоблачных рисков</p>
 					</div>
-					<div class="row"></div>
+					<!--+pic('headerBlock-book.png')(class="headerBlock__book d-lg-none")-->
+					<div class="headerBlock__main-row row">
+						<div class="col-lg-8 col-xl-7">
+							<div class="headerBlock__mob-row row">
+								<div class="col-sm-5 col-md-auto d-lg-none">
+									<!-- picture-->
+									<picture class="headerBlock__book"> 
+										<source type="image/webp" srcset="img/@2x/webp/headerBlock-book.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/headerBlock-book.webp"/>
+										<source type="image/png" srcset="img/@2x/headerBlock-book.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/headerBlock-book.png"/><img src="img/@2x/headerBlock-book.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="col-sm-7 col-md">
+									<div class="headerBlock__row row gy-2 gy-md-5">
+										<div class="col-auto">
+											<div class="headerBlock__discount">
+												<div class="headerBlock__price">29₽
+												</div>
+												<div class="headerBlock__old-price"><span>вместо</span><span>2 990 ₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__timer-col col-lg">
+											<div class="headerBlock__title">Увасесть 15 минут, чтобы получить «MasterTradePRO 2.0» по скидке 99%
+											</div>
+											<div class="headerBlock__timer">
+												<div class="time__block">
+													<div class="idvd_timer autostart" data-redirect_url="" data-duration_hours="325"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваш E-mail"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__row row gy-4">
+										<div class="col-sm-auto">
+											<button class="form-wrap__btn" type="submit">Получить доступ
+											</button>
+										</div>
+										<div class="col-sm">
+											<div class="form-wrap__sub-row row">
+												<div class="col-auto">
+													<label class="form-wrap__chb">
+														<input class="invisible" type="checkbox" checked="checked"/>
+														<div class="square"></div>
+													</label>
+												</div>
+												<div class="col">
+													<div class="form-wrap__policy">
+														Нажимая кнопку "Оплатить" Вы даете согласие на
+														<a href="#">обработку персональных данных</a>, а также подтверждаете ознакомление с
+														<a href="#">публичной офертой</a>
+														и автоматическими списаниями.
+														<span>Первое списание в размере 889 рублей</span>
+														через 72 часа после подписки и далее, согласно
+														<a href="#">тарифу</a>
+														раз в 7 дней 889 рублей
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="headerBlock__book-col col-lg-4 col-xl-5 d-none d-lg-block">
+							<!-- picture-->
+							<picture class="headerBlock__book"> 
+								<source type="image/webp" srcset="img/@2x/webp/headerBlock-book.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/headerBlock-book.webp"/>
+								<source type="image/png" srcset="img/@2x/headerBlock-book.png" media="(min-width:576px)"/>
+								<source type="image/png" srcset="img/@1x/headerBlock-book.png"/><img src="img/@2x/headerBlock-book.png" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
+			<!-- start sBored-->
+			<section class="sBored section" id="sBored">
+				<div class="sBored__container container">
+					<!-- picture-->
+					<picture class="sBored__bg"> 
+						<source type="image/webp" srcset="img/@2x/webp/sBored-img2.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/sBored-img2.webp"/>
+						<source type="image/png" srcset="img/@2x/sBored-img2.png" media="(min-width:576px)"/>
+						<source type="image/png" srcset="img/@1x/sBored-img2.png"/><img src="img/@2x/sBored-img2.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<div class="sBored__row row">
+						<div class="col-xl-5">
+							<div class="section-title section-title--top">
+								<h2>
+									Скажите, Вам самим это еще
+									<span>не надоело?</span>
+								</h2>
+							</div>
+						</div>
+						<div class="col-xl-7">
+							<div class="sBored__items">
+								<div class="sBored__item">
+									<div class="sBored__item-row row">
+										<div class="col-auto">
+											<!-- picture-->
+											<picture class="sBored__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sBored-1.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sBored-1.webp"/>
+												<source type="image/png" srcset="img/@2x/sBored-1.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sBored-1.png"/><img src="img/@2x/sBored-1.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="col">
+											<div class="sBored__title">Нелюбимая работа
+											</div>
+											<div class="sBored__descr">которая не приносит нужного дохода
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sBored__item">
+									<div class="sBored__item-row row">
+										<div class="col-auto">
+											<!-- picture-->
+											<picture class="sBored__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sBored-2.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sBored-2.webp"/>
+												<source type="image/png" srcset="img/@2x/sBored-2.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sBored-2.png"/><img src="img/@2x/sBored-2.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="col">
+											<div class="sBored__title">Постоянная нехватка денег 
+											</div>
+											<div class="sBored__descr">и вынужденные ограничения
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sBored__item">
+									<div class="sBored__item-row row">
+										<div class="col-auto">
+											<!-- picture-->
+											<picture class="sBored__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sBored-3.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sBored-3.webp"/>
+												<source type="image/png" srcset="img/@2x/sBored-3.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sBored-3.png"/><img src="img/@2x/sBored-3.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="col">
+											<div class="sBored__title">Никакой перспективы 
+											</div>
+											<div class="sBored__descr">зарабатывать в будущем в 2, 5 … 10 раз больше
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-7 ms-auto">
+							<div class="section-title section-title--bot">
+								<h2>
+									А быть может, Вы&#160;уже пробовали трейдинг и
+									<span>ОБОЖГЛИСЬ?</span>
+								</h2>
+								<p>Понимаю! За 17+ лет на рынке FOREX я видел сотни новичков, которые потеряли всё…</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBored-->
+			<!-- start sLucky-->
+			<section class="sLucky section" id="sLucky">
+				<div class="container">
+					<div class="section-title">
+						<h2>Но сегодня ВАШ счастливый день! Удача улыбнулась именно&#160;Вам!</h2>
+					</div>
+					<div class="sLucky__row row gy-3">
+						<div class="sLucky__col sLucky__col--descr col-sm-auto">
+							<p>Расслабьтесь на несколько секунд и просто помечтайте</p>
+						</div>
+						<div class="sLucky__col sLucky__col--arrows col-sm">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-arrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="sLucky__slider-wrap">
+						<div class="container">
+							<div class="swiper sLucky-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-1.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-1.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-1.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-1.png"/><img src="img/@2x/sLucky-1.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">Все ваши долги и кредиты — в прошлом
+											</div>
+											<div class="sLucky__pink">Они полностью закрыты
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-2.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-2.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-2.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-2.png"/><img src="img/@2x/sLucky-2.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">Вы посещаете новые страны
+											</div>
+											<div class="sLucky__pink">Путешествуете так часто, как Вам этого хочется
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-3.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-3.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-3.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-3.png"/><img src="img/@2x/sLucky-3.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">Работаете тогда, когда хотите
+											</div>
+											<div class="sLucky__pink">Там, где Вам удобно. С ноутбука или даже смартфона
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-4.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-4.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-4.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-4.png"/><img src="img/@2x/sLucky-4.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">У Вас престижный автомобиль
+											</div>
+											<div class="sLucky__pink">Они полностью закрыты
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-5.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-5.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-5.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-5.png"/><img src="img/@2x/sLucky-5.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">Вы живете в большой квартире или доме своей мечты
+											</div>
+											<div class="sLucky__pink">Они полностью закрыты
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-6.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-6.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-6.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-6.png"/><img src="img/@2x/sLucky-6.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">У Вас накоплена внушительная финансовая «подушка»
+											</div>
+											<div class="sLucky__pink">Они полностью закрыты
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sLucky__item">
+											<!-- picture-->
+											<picture class="sLucky__img"> 
+												<source type="image/webp" srcset="img/@2x/webp/sLucky-7.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/sLucky-7.webp"/>
+												<source type="image/png" srcset="img/@2x/sLucky-7.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/sLucky-7.png"/><img src="img/@2x/sLucky-7.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="sLucky__title">Ваша жизнь наконец принадлежит Вам!
+											</div>
+											<div class="sLucky__pink">Они полностью закрыты
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sLucky-->
+			<!-- start sHow-->
+			<section class="sHow section" id="sHow">
+				<div class="container">
+					<div class="section-title">
+						<h2>«Как этого добиться?» — спросите Вы</h2>
+					</div>
+					<div class="sHow__row row">
+						<div class="col-lg-4">
+							<div class="sHow__item" data-pink="Отвечу просто ">
+								<div class="sHow__txt">с помощью моего 17-летнего опыта на рынке FOREX, упакованного в обучающую систему MasterTrade Pro 2.0
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="sHow__item" data-pink="Еще проще ">
+								<div class="sHow__txt">Вы не тратите время на изучение теории, эксперименты и попытки разобраться самому
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="sHow__item">
+								<div class="sHow__txt">Просто забираете мою систему (пошаговый обучающий курс + 4 автоматические стратегии) и, строго следуя инструкциям, начинаете кратно умножать свой депозит
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 mx-auto">
+							<a class="sHow__btn" href="#">Попробовать
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sHow-->
+			<!-- start sImpossible-->
+			<section class="sImpossible section" id="sImpossible">
+				<div class="sImpossible__bg"><img loading="lazy" src="img/svg/sImpossible-bg.svg" alt=""/>
+				</div>
+				<div class="container">
+					<div class="section-title">
+						<h2>«О чем вы говорите? Это невозможно!»</h2>
+					</div>
+					<div class="sImpossible__row row">
+						<div class="sImpossible__col sImpossible__col--txt col-lg-4 col-xl-3">
+							<p><b>Я знал, что Вы это подумаете.</b></p>
+							<p>Окей, довольно голословных утверждений, перейдем к фактам.</p>
+							<p>
+								В январе 2018 я открыл торговый счет с начальным депозитом в
+								<b>$1.000 и 15 месяцев торговал на нем строго по системе MasterTrade PRO. В марте 2019 на счету было уже</b><b>$107.000</b>
+							</p>
+						</div>
+						<div class="sImpossible__col sImpossible__col--box col-lg-8 col-xl-9">
+							<div class="sImpossible__box">
+								<div class="sImpossible__b-row row gx-0">
+									<div class="sImpossible__b-col sImpossible__b-col--txt col-md-auto">
+										<div class="sImpossible__items">
+											<div class="sImpossible__item">
+												<div class="sImpossible__title">Период:
+												</div>
+												<div class="sImpossible__pink">1 год и 3 месяца
+												</div>
+												<div class="sImpossible__gray">с января 2018 по март 2019
+												</div>
+											</div>
+											<div class="sImpossible__item">
+												<div class="sImpossible__title">Начальный депозит:
+												</div>
+												<div class="sImpossible__pink">1000 долларов США
+												</div>
+											</div>
+											<div class="sImpossible__item">
+												<div class="sImpossible__title">Результат:
+												</div>
+												<div class="sImpossible__pink">107 000 долларов США
+												</div>
+											</div>
+											<div class="sImpossible__item">
+												<div class="sImpossible__title">Максимальная просадка:
+												</div>
+												<div class="sImpossible__pink">20%
+												</div>
+											</div>
+										</div>
+										<a class="sImpossible__btn" href="#">Смотреть отчет
+										</a>
+									</div>
+									<div class="sImpossible__b-col sImpossible__b-col--pic col-md">
+										<!-- picture-->
+										<picture class="sImpossible__img"> 
+											<source type="image/webp" srcset="img/@2x/webp/sImpossible-img.webp" media="(min-width:576px)"/>
+											<source type="image/webp" srcset="img/@1x/webp/sImpossible-img.webp"/>
+											<source type="image/png" srcset="img/@2x/sImpossible-img.png" media="(min-width:576px)"/>
+											<source type="image/png" srcset="img/@1x/sImpossible-img.png"/><img src="img/@2x/sImpossible-img.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sImpossible-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
@@ -125,7 +532,7 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="js/jquery-2.2.4.min.js"></script><script src="//infoclub.info/tools/api_subscriber/timer_universal.js?3"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>

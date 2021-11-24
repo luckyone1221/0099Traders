@@ -3,10 +3,14 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sBored/_sBored.pug
+include ../blocks/sLucky/_sLucky.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sImpossible/_sImpossible.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg='index.png'
 
 block title
 	- let  title= 'title'
@@ -14,14 +18,13 @@ block title
 block pagecontent
 	//- +mob-mnu()
 	+header()
-	+top-nav()
-	+topLine()
-	.container
-		.swiper-wrapper
-			.swiper-slide 1
-			.swiper-slide 2
-			.swiper-slide 3
+		+top-nav()
+	//+topLine()
 	+headerBlock()
+	+sBored()
+	+sLucky()
+	+sHow()
+	+sImpossible()
 	+sForm()
 	+sContact()
 	+footer()

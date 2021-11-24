@@ -1,0 +1,120 @@
+// start .sHow
+.sHow {
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(88)};
+		--sPB: #{rem(45)};
+		--sTPB: #{rem(47)};
+	}
+
+	.section-title{
+		max-width: rem(980);
+
+		h2{
+
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(30)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-y: #{rem(65)};
+		}
+
+		& > *{
+			display: flex;
+			flex-direction: column;
+
+			&:nth-child(1){
+				--txt-mw: #{rem(268)};
+			}
+			&:nth-child(2){
+				--txt-mw: #{rem(248)};
+			}
+			&:nth-child(3){
+				--txt-mw: #{rem(312)};
+				@include media-breakpoint-up(lg){
+					font-size: rem(16);
+				}
+
+				position: relative;
+				z-index: 1;
+
+				&:after{
+					@include media-breakpoint-up(lg){
+						content: '';
+					}
+					position: absolute;
+					left: rem(3);
+					top: calc(100% - 10px);
+
+					width: rem(186.5);
+					height: rem(125);
+
+					background-image: url(../img/svg/arrow-down-left.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+				}
+			}
+		}
+	}
+	&__item{
+		flex-grow: 1;
+		@include media-breakpoint-up(xl){
+			min-height: rem(256);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media-breakpoint-down(lg){
+			border: 1px solid rgba($black, .2);
+
+			padding: rem(36) rem(24);
+		}
+		&[data-pink]{
+			border: 1px solid rgba($black, .2);
+
+			padding: rem(36) rem(24);
+			@include media-breakpoint-up(xl){
+				padding: rem(60) rem(20) rem(45);
+			}
+
+			position: relative;
+			z-index: 1;
+
+			&:after{
+				content: attr(data-pink);
+				position: absolute;
+				top: 0;
+				transform: translateY(-50%);
+				padding: rem(8) rem(8) rem(5);
+
+
+				font-size: rem(16);
+				color: $white;
+				background-color: $primary;
+
+				left: rem(24);
+				max-width: calc(100% - #{rem(24 * 2)});
+				@include media-breakpoint-up(xl){
+					left: rem(27);
+					max-width: calc(100% - #{rem(27 * 2)});
+				}
+			}
+		}
+	}
+	&__txt{
+		@include media-breakpoint-up(xl){
+			max-width: var(--txt-mw, 100%);
+		}
+	}
+	&__btn{
+		@extend .btn-default;
+		width: 100%;
+
+	}
+	&__{}
+	&__{}
+} // end.sHow

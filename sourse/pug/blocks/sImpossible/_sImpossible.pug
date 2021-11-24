@@ -1,0 +1,39 @@
+mixin sImpossible(data)
+	// start sImpossible
+	+b.SECTION.sImpossible.section#sImpossible&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/sImpossible-bg.svg" alt="")
+		.container
+			+b.section-title
+				h2 «О чем вы говорите? Это невозможно!»
+			+e.row.row
+				+e.col--txt.col-lg-4.col-xl-3
+					p
+						b Я знал, что Вы это подумаете.
+					p Окей, довольно голословных утверждений, перейдем к фактам.
+					p
+						| В январе 2018 я открыл торговый счет с начальным депозитом в
+						|
+						b $1.000 и 15 месяцев торговал на нем строго по системе MasterTrade PRO. В марте 2019 на счету было уже
+						|
+						b $107.000
+				+e.col--box.col-lg-8.col-xl-9
+					+e.box
+						+e.b-row.row.gx-0
+							+e.b-col--txt.col-md-auto
+								+e.items
+									+sImpossibleItem('Период:', '1 год и 3 месяца', 'с января 2018 по март 2019')
+									+sImpossibleItem('Начальный депозит:', '1000 долларов США')
+									+sImpossibleItem('Результат:', '107 000 долларов США')
+									+sImpossibleItem('Максимальная просадка:', '20%')
+								+e.btn(href="#") Смотреть отчет
+							+e.b-col--pic.col-md
+								+pic('sImpossible-img.png')(class="sImpossible__img")
+	// end sImpossible
+
+mixin sImpossibleItem(title, pink, gray)
+	+e.item
+		+e.title=title
+		+e.pink=pink
+		if gray
+			+e.gray=gray

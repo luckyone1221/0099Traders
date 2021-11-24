@@ -1,0 +1,135 @@
+// start .sFake
+.sFake {
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(26)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(32)};
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-up(lg){
+				max-width: rem(760);
+			}
+			margin-bottom: rem(44);
+
+			span{
+				display: inline-block;
+			}
+		}
+
+		p{
+			@extend .h4;
+		}
+	}
+	&__descr{
+		max-width: rem(784);
+		margin-bottom: rem(40);
+
+		p{
+			margin-bottom: rem(32);
+		}
+	}
+	&__box{
+		border-top: 3px solid $primary;
+		padding-top: rem(44);
+
+		margin-bottom: rem(48);
+	}
+	&__box-txt{
+		position: relative;
+		z-index: 1;
+
+		font-weight: 600;
+
+		font-size: rem(24);
+		@include media-breakpoint-up(sm){
+			font-size: rem(30);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(40);
+		}
+		line-height: 1.2;
+		text-align: center;
+		color: $black;
+
+	}
+	&__img{
+		pointer-events: none;
+		position: relative;
+		@include media-breakpoint-up(xxl){
+			margin-top: rem(-90);
+			margin-bottom: rem(-33px);
+		}
+
+		width: 100%;
+		height: auto;
+		img{
+			width: 100%;
+		}
+	}
+	&__box-bot{
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+
+		&:before,
+		&:after{
+			content: '';
+			display: inline-block;
+			background-color: $primary;
+			height: 3px;
+			width: auto;
+			flex-grow: 1;
+		}
+
+		span{
+			padding: 0 rem(25);
+			max-width: 80%;
+		}
+		font-size: rem(24);
+		@include media-breakpoint-up(sm){
+			font-size: rem(30);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(40);
+		}
+		line-height: 1.2;
+		text-align: center;
+
+		color: $primary;
+	}
+	&__items{
+		margin-bottom: rem(49);
+	}
+	&__item{
+		margin-bottom: rem(45);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&:first-child{
+			--title-mb: #{rem(39)};
+		}
+	}
+	&__i-title{
+		@extend .h4;
+
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(xl){
+			margin-bottom: var(--title-mb, #{rem(24)});
+		}
+	}
+	&__i-descr{
+		max-width: rem(936);
+	}
+	&__foot-btn{
+		@extend .btn-default;
+		width: rem(384);
+		max-width: 100%;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sFake

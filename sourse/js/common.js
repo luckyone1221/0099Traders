@@ -294,6 +294,17 @@ function eventHandler() {
 		},
 	});
 
+	//
+	let sFeedbackSlider = new Swiper('.sFeedback-slider-js', {
+		slidesPerView: "auto",
+		spaceBetween: 32,
+		pagination: {
+			el: '.sFeedback--js .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

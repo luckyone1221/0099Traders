@@ -1,0 +1,54 @@
+mixin sFeedback(data)
+	// start sFeedback
+	+b.SECTION.sFeedback--js.section#sFeedback&attributes(attributes)
+		.container
+			+b.section-title
+				h2
+					| После такого, мне не осталось ничего,
+					|
+					span как взяться за разработку
+					|
+					| собственной обучающей программы. Сегодня она&#160;доступна всем желающим!
+			+e.slider-wrap
+				.swiper.sFeedback-slider-js
+					.swiper-wrapper
+						+sFeedbackSlide({
+							income: '+50% к счету:',
+							name: 'Сергей',
+							imgNum: '1',
+						})
+						+sFeedbackSlide({
+							income: '+150% к счету:',
+							name: 'Сергей2',
+							imgNum: '1',
+						})
+						+sFeedbackSlide({
+							income: '+220% к счету:',
+							name: 'Сергей3',
+							imgNum: '1',
+						})
+						+sFeedbackSlide({
+							income: '+120% к счету:',
+							name: 'Сергей4',
+							imgNum: '1',
+						})
+				.swiper-pagination
+
+	// end sFeedback
+
+mixin sFeedbackSlide(data)
+	.swiper-slide
+		+e.slide
+			+e.row.row
+				+e.col--txt.col-lg-6
+					+e.title
+						span Заработано
+						span=data.income
+					+e.img
+						img(loading="lazy" src=`img/@2x/sFeedback-${data.imgNum}.jpg` alt="")
+					+e.name=data.name
+					+e.btn(href="#") Смотреть стейтмент
+					+e.hint Нажмите, чтобы раскрыть
+				+e.col--img.col-lg-6
+					+e.link(href=`img/@2x/sFeedback-img-${data.imgNum}.png` data-fancybox="sFeedback-imgs")
+						+pic(`sFeedback-img-${data.imgNum}.png`)(class="sFeedback__slide-img")

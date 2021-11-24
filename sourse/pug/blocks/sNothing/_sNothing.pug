@@ -1,0 +1,17 @@
+mixin sNothing(data)
+	// start sNothing
+	+b.SECTION.sNothing.section#sNothing&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col--title.col-lg-5
+					+b.section-title
+						h2 «Ну, это еще ничего не значит…»
+				+e.col--txt.col-lg-3
+					.row.align-items-center.gy-3
+						.col-sm-auto.d-lg-none
+							+pic('sNothing-img.png')(class="sNothing__img")
+						.col-sm
+							+e.descr Конечно не значит. Поэтому в апреле 2019 я открыл новый счет. Вновь пополнил его на скромную $1.000 и продолжил торговать по системе. Публично.
+				+e.col--img.col-lg-4.d-none.d-lg-block
+					+pic('sNothing-img.png')(class="sNothing__img")
+	// end sNothing

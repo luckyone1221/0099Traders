@@ -59,90 +59,15 @@ const JSCCommon = {
 	// tabs  .
 	tabscostume() {
 		//ultimate tabs
-		let cTabs = document.querySelectorAll('.tabs');
-		for (let tab of cTabs){
-			let Btns = tab.querySelectorAll('.tabs__btn')
-			let contentGroups = tab.querySelectorAll('.tabs__wrap');
-
-			for (let btn of Btns){
-				btn.addEventListener('click', function (){
-
-					for (let btn of Btns){
-						btn.classList.remove('active');
-					}
-					this.classList.add('active');
-
-					let index = [...Btns].indexOf(this);
-					//-console.log(index);
-
-					for (let cGroup of contentGroups){
-						let contentItems = cGroup.querySelectorAll('.tabs__content');
-
-						for (let item of contentItems){
-							item.classList.remove('active');
-						}
-						contentItems[index].classList.add('active');
-					}
-				})
-			}
-		}
-	},
-	// /tabs
-
-	inputMask() {
-		// mask for input
-		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
-	// /inputMask
-	ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
-	},
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				Fancybox.close();
-				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
+		let tab ='tabs';
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this)
+				.addClass('active').siblings().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+				.eq($(this).index()).fadeIn().addClass('active');
 
 		});
-	},
+	}, 
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -180,47 +105,18 @@ const JSCCommon = {
 
 			}
 		});
-	},
-	makeDDGroup() {
-		let parents = document.querySelectorAll('.dd-group-js');
-		for (let parent of parents) {
-			if (parent) {
-				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-				$(ChildHeads).click(function () {
-					let clickedHead = this;
-
-					$(ChildHeads).each(function () {
-						if (this === clickedHead) {
-							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
-							});
-						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
-					});
-
-				});
-			}
-		}
-	},
+	}, 
 };
 const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume();
+	JSCCommon.tabscostume();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.makeDDGroup();
+	// JSCCommon.makeDDGroup();
 	// JSCCommon.animateScroll();
 
 	//luckyOne Js
@@ -311,6 +207,21 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	
+	let modalwinSlider = new Swiper('.modal-win__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ' .swiper-button-next',
+			prevEl: ' .swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

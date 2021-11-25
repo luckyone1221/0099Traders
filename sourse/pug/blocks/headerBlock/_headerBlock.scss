@@ -311,6 +311,15 @@
 	}
 	&__{}
 	&__{}
+	&__mob-col{
+			@include media-breakpoint-down(sm) {
+					display: flex;
+					flex-direction: column-reverse;
+					.headerBlock__discount{
+						margin-top: 2rem;
+					}
+			}
+	}
 }
 
 // end.headerBlock

@@ -92,11 +92,8 @@ body {
 .main-wrapper {
 	//padding-top: var(--header-h, 0px);
 	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	min-height: 100vh;
+	width: 100%; 
+	overflow: hidden;
 }
 
 .section {
@@ -271,11 +268,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -549,3 +546,5 @@ iframe {
 		color: $white!important;
 	}
 }
+
+

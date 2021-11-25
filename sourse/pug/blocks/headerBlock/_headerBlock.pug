@@ -1,5 +1,16 @@
 mixin formhead()
+	//- .dp_form.dp_form_4_b2efc613
+	//- 	script(type='text/javascript').
+	//- 		(function (d, w, r, t, cl) {
+	//- 		var rid = r.toString().substr(2);var e = d.getElementsByClassName(cl)[0];
+	//- 		e.className="";e.id = "dp_form_"+rid;
+	//- 		var n = d.getElementsByTagName(t)[0], s = d.createElement(t), f = function () {n.parentNode.insertBefore(s, n);};
+	//- 		s.type = "text/javascript";s.async = true;s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//client.digitalproduct.ru/form_loader/4/b2efc613/?rid="+rid;
+	//- 		if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else {f();}
+	//- 		})(document, window, Math.random(), "script", "dp_form_4_b2efc613");
+
 	+form-wrap
+		
 		+input('Ваш E-mail', 'email')
 		+e.row.row.gy-4
 			.col-sm-auto
@@ -42,10 +53,10 @@ mixin headerBlock()
 				p MasterTrade PRO 2.0 — это автоматический робот, который увеличивает Ваш депозит в десятки раз за год без заоблачных рисков
 			//+pic('headerBlock-book.png')(class="headerBlock__book d-lg-none")
 			+e.main-row.row
-				.col-lg-8.col-xl-7
+				+e.mob-col.col-lg-8.col-xl-7
 					+e.mob-row.row
-						.col-sm-5.col-md-auto.d-lg-none
-							+pic('headerBlock-book.png')(class="headerBlock__book")
+						//- .col-sm-5.col-md-auto.d-lg-none
+						//- 	+pic('headerBlock-book.png')(class="headerBlock__book")
 						.col-sm-7.col-md
 							+e.row.row.gy-2.gy-md-5
 								.col-auto
@@ -54,13 +65,13 @@ mixin headerBlock()
 										+e.old-price
 											span вместо
 											span 2 990 ₽
-								+e.timer-col.col-lg
-									+e.title Увасесть 15 минут, чтобы получить «MasterTradePRO 2.0» по скидке 99%
+								+e.timer-col.col-md
+									+e.title У вас есть 15 минут, чтобы получить «MasterTradePRO 2.0» по скидке 99%
 									+e.timer
 										.time__block
-											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='325')
+											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='1')
 					+formhead()
-				+e.book-col.col-lg-4.col-xl-5.d-none.d-lg-block
+				+e.book-col.col-lg-4.col-xl-5
 					+pic('headerBlock-book.png')(class="headerBlock__book")
 	// end headerBlock
 	
@@ -90,10 +101,10 @@ mixin headerBlock2()
 											span вместо
 											span 2 990 ₽
 								+e.timer-col.col-lg
-									+e.title Увасесть 15 минут, чтобы получить «MasterTradePRO 2.0» по скидке 99%
+									+e.title У вас есть 15 минут, чтобы получить «MasterTradePRO 2.0» по скидке 99%
 									+e.timer
 										.time__block
-											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='325')
+											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='1')
 					+formhead()
 				+e.book-col.col-lg-4.col-xl-5.d-none.d-lg-block
 					+pic('headerBlock-book.png')(class="headerBlock__book")

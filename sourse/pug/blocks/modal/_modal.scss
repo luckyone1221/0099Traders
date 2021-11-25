@@ -160,3 +160,82 @@ a {
 			margin-bottom: 1rem;
 		}
 }
+
+.modal-win{
+	box-shadow: 0px 19px 57px rgba(0, 0, 0, 0.11);
+	border-radius: 10px;
+	&--steps{
+		padding: 0;
+		width: 1216px;
+	}
+	.tabs{
+		&__caption{
+			border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+			@include media-breakpoint-up(sm) {
+
+				display: flex;
+				padding-left: rem(30);
+				flex-wrap: wrap;
+			}
+		}
+		&__btn{
+			cursor: pointer;
+			border-bottom: 1px solid transparent;
+			@include media-breakpoint-up(sm) {
+
+				padding: rem(26) rem(10);
+				margin-bottom: -1px;
+				text-align: left;
+				margin-right: rem(10);
+			}
+			text-align: center;
+			padding: rem(16) rem(10);
+			font-size: rem(18);
+			&:hover,
+			&.active{
+				border-color: $primary;
+			}
+		}
+		&__wrap{
+				@include media-breakpoint-up(sm) {
+
+					padding: rem(40);
+				}
+				padding: rem(20);
+			position: relative;
+		}
+	}
+	&__arrow-wrap{
+		position: absolute;
+		right: rem(0);
+		top: rem(0);
+		width: rem(36 * 3);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 10;
+	}
+	&__title{
+		@include rfs(60px);
+		line-height: 1;
+		margin-bottom: rem(10);
+	}
+	p{
+		max-width: rem(865);
+	}
+	.swiper-pagination{
+		text-align: left;
+		padding-left: 0;
+		padding-top: 40px;
+	}
+}
+
+.fancybox__content>.carousel__button.is-close  {
+	@extend .btn, .btn-primary;
+	padding: 0;
+	border-radius: 0;
+	top: -5px;
+	right: -5px;
+	color: #fff !important; 
+
+}

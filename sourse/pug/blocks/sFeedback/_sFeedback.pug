@@ -13,24 +13,27 @@ mixin sFeedback(data)
 				.swiper.sFeedback-slider-js
 					.swiper-wrapper
 						+sFeedbackSlide({
-							income: '+50% к счету:',
+							income: 'Торговый счет <br> УДВОЕН:',
+							name: 'Александр',
+							imgNum: '1',
+							link:"ReportHistory-5307902.html"
+						})
+						+sFeedbackSlide({
+							income: `Заработано<br> +50% к счету:`,
 							name: 'Сергей',
-							imgNum: '1',
+							imgNum: '2'
 						})
 						+sFeedbackSlide({
-							income: '+150% к счету:',
-							name: 'Сергей2',
-							imgNum: '1',
+							income: `Заработано <br> +60% к счету:`,
+							name: 'Вячеслав',
+							imgNum: '3',
+							link:"ReportHistory-5307946.html"
 						})
 						+sFeedbackSlide({
-							income: '+220% к счету:',
-							name: 'Сергей3',
-							imgNum: '1',
-						})
-						+sFeedbackSlide({
-							income: '+120% к счету:',
-							name: 'Сергей4',
-							imgNum: '1',
+							income: `Торговый счет <br> УТРОЕН:`,
+							name: 'Любовь',
+							imgNum: '4',
+							link:"ReportHistory-5307971.html"
 						})
 				.swiper-pagination
 
@@ -41,14 +44,15 @@ mixin sFeedbackSlide(data)
 		+e.slide
 			+e.row.row
 				+e.col--txt.col-lg-6
-					+e.title
-						span Заработано
-						span=data.income
+					+e.title 
+						span!= data.income
 					+e.img
-						img(loading="lazy" src=`img/@2x/sFeedback-${data.imgNum}.jpg` alt="")
+						//- img(loading="lazy" src=`img/@2x/sFeedback-${data.imgNum}.jpg` alt="")
+						+pic(`sFeedback-${data.imgNum}.jpg`,'',0)
 					+e.name=data.name
-					+e.btn(href="#") Смотреть стейтмент
+					if data.link
+						+e.btn(href= data.link target="_blank") Смотреть стейтмент
 					+e.hint Нажмите, чтобы раскрыть
 				+e.col--img.col-lg-6
-					+e.link(href=`img/@2x/sFeedback-img-${data.imgNum}.png` data-fancybox="sFeedback-imgs")
-						+pic(`sFeedback-img-${data.imgNum}.png`)(class="sFeedback__slide-img")
+					+e.link(href=`img/@2x/sFeedback-img-${data.imgNum}.png` data-fancybox="sFeedback-imgs").bg-wrap
+						+pic(`sFeedback-img-${data.imgNum}.png`,'bg')(class="sFeedback__slide-img picture-bg")

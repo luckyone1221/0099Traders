@@ -83,28 +83,12 @@ const JSCCommon = {
 	},
 	//pure js
 	animateScroll(topShift=80) {
-		document.addEventListener('click', function (){
-			if (event.target.closest('.menu li a, .scroll-link')) {
-				let self = event.target.closest('.menu li a, .scroll-link');
-				event.preventDefault();
-
-				let targetSelector = self.getAttribute('href');
-				let target = document.querySelector(targetSelector);
-
-				if (!target) {
-					self.setAttribute("href", '/' + targetSelector);
-				}
-				else{
-					event.preventDefault();
-					let targetTop = target.offsetTop;
-					window.scrollTo({
-						top: targetTop - topShift,
-						behavior: "smooth",
-					});
-				}
-
-			}
-		});
+		$('.menu li a, .scroll-link').click(function(e){
+			e.preventDefault();
+			$([document.documentElement, document.body]).animate({
+				scrollTop: $($(this).attr("href")).offset().top - 280
+			}, 2000);
+		})
 	}, 
 };
 const $ = jQuery;
@@ -117,7 +101,7 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	// JSCCommon.makeDDGroup();
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 
 	//luckyOne Js
 	let headerH;
@@ -197,6 +181,7 @@ function eventHandler() {
 	let sRewSlider = new Swiper('.sRew__slider--js', {
 		slidesPerView: "auto",
 		spaceBetween: 32,
+		// slidesPerGroupSkip: 1,
 		navigation: {
 			nextEl: '.sRew .swiper-button-next',
 			prevEl: '.sRew .swiper-button-prev',
@@ -205,6 +190,13 @@ function eventHandler() {
 			el: '.sRew .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				slidesPerView: 2,
+			},
 		},
 	});
 	

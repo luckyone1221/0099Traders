@@ -9,7 +9,7 @@ mixin formhead()
 	//- 		if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else {f();}
 	//- 		})(document, window, Math.random(), "script", "dp_form_4_b2efc613");
 
-	+form-wrap
+	+form-wrap()&attributes(attributes)
 		
 		+input('Ваш E-mail', 'email')
 		+e.row.row.gy-4
@@ -108,7 +108,7 @@ mixin headerBlock2()
 									+e.timer
 										.time__block
 											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='1')
-					+formhead()
+					+formhead()#form
 				+e.book-col.col-lg-4.col-xl-5.d-none.d-lg-block
 					picture(class="headerBlock__book")
 						img(src="img/headerBlock-book.png", alt="", loading="lazy")

@@ -23,12 +23,12 @@ mixin sResult(data)
 					+e.graph
 						+e.g-title Апрель 2019 — Июнь 2020
 						+e.g-gray Начальный депозит: $1000
-						+e.g-img(href="img/svg/graph.svg" data-fancybox="graph")
+						+e.g-img
 							img(loading="lazy" src="img/svg/graph.svg" alt="")
 				+e.sub-row-col.col-lg-4
 					+e.g-sub-row.row
-						+sResultItem('Подробный отчет по каждой сделке, начиная с апреля 2019 года здесь:', 'Смотреть сделки!')(href="#")
-						+sResultItem('Таблица-дневник торговли с результатом по каждой сделке:', 'Смотреть таблицу!')(href="#")
+						+sResultItem('Подробный отчет по каждой сделке, начиная с апреля 2019 года здесь:', 'Смотреть сделки!')(href="https://www.infoclub.info/group/mastertradebot/discussions/stat/15144?pid=159134" target="_blank")
+						+sResultItem('Таблица-дневник торговли с результатом по каждой сделке:', 'Смотреть таблицу!')(href="https://docs.google.com/spreadsheets/d/1pf2tYPjBGKtG4aXZOwvVqEqNtK7x0zoU6ifQ63SVxl0/edit#gid=0" target="_blank")
 			+e.book-row.row.gy-4.align-items-center
 				.col-md-auto
 					+pic('sResult-book.png')(class="sResult__book")

@@ -9,17 +9,25 @@
 			&::after{
 				height: 100%;
 				top: 0;
-				padding: rem(10) rem(0);
 			}
-			display: inline-block; 
+			padding: rem(10) rem(10);
+			display: inline; 
 			// background-color: $primary;
 		}
 	}
 	&__slider{
 		overflow: visible;
+		@include media-breakpoint-up(lg) {
+				margin-left: 0;
+
+				max-width: rem(488 *2 + 32 );
+			}
 	}
 	&__slide{
 		position: relative;
+			@include media-breakpoint-up(lg) {
+				max-width: 100%;
+			}
 		max-width: rem(488);
 		
 		// width: 100%;

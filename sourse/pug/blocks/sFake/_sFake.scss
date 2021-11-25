@@ -30,6 +30,7 @@
 			margin-bottom: rem(32);
 		}
 	}
+
 	&__box{
 		border-top: 3px solid $primary;
 		padding-top: rem(44);
@@ -57,7 +58,13 @@
 	&__img{
 		pointer-events: none;
 		position: relative;
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(lg){
+				// picture{
+		min-height: 500px;
+	}
+	// }
+	@include media-breakpoint-up(xxl){
+			min-height: 700px;
 			margin-top: rem(-90);
 			margin-bottom: rem(-33px);
 		}

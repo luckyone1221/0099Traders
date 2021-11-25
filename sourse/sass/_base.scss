@@ -31,9 +31,9 @@ body {
 		margin-right: var(--spacing-end);
 	}
 	// min-width: 575px; 
-	-webkit-font-smoothing: antialiased;
-	position: relative;
-	overflow-x: hidden; 
+	// -webkit-font-smoothing: antialiased;
+	// position: relative;
+	// overflow-x: hidden; 
 	
 	&.loaded_hiding {
 		@include mt;
@@ -112,16 +112,17 @@ body {
 		span{
 			position: relative;
 			z-index: 1;
-			&:after{
-				content: '';
-				position: absolute;
-				z-index: -1;
-				top: 3px;
-				left: rem(-18);
-				width: calc(100% + #{rem(35)});
-				height: calc(100% - 7px);
-				background-color: $primary;
-			}
+			background-color: $primary;
+			padding: em(1) em(5);
+			// &:after{
+			// 	content: '';
+			// 	position: absolute;
+			// 	z-index: -1;
+			// 	top: 3px;
+			// 	left: rem(-18);
+			// 	width: calc(100% + #{rem(35)});
+			// 	height: calc(100% - 7px);
+			// }
 			//background-color: $primary;
 		}
 	}

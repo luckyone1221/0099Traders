@@ -35,8 +35,8 @@
 
 	}
 	&__col{
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
 		&--txt{
 			position: relative;
 		}
@@ -115,20 +115,22 @@
 	}
 	&__link{
 		display: block;
+		height: 100%;
+		@include block(560, 448);
 	}
 	&__slide-img{
 		@include media-breakpoint-up(xxl){
-			width: rem(544);
-			margin-left: auto;
+			// width: rem(544);
+			// margin-left: auto;
 		}
 
-		min-height: 100%;
-		display: block;
-		width: 100%;
-		img{
-			width: 100%;
-			height: auto;
-		}
+		// min-height: 100%;
+		// display: flex;
+		// width: 100%;
+		// img{
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
 	}
 
 	.swiper-pagination{

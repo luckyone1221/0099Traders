@@ -72,7 +72,9 @@ mixin headerBlock()
 											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='1')
 					+formhead()
 				+e.book-col.col-lg-4.col-xl-5
-					+pic('headerBlock-book.png')(class="headerBlock__book")
+					picture(class="headerBlock__book")
+						img(src="img/headerBlock-book.png" loading="lazy", alt="")
+					//- +pic('headerBlock-book.png')
 	// end headerBlock
 	
 mixin headerBlock2()
@@ -90,7 +92,8 @@ mixin headerBlock2()
 				.col-lg-8.col-xl-7
 					+e.mob-row.row
 						.col-sm-5.col-md-auto.d-lg-none
-							+pic('headerBlock-book.png')(class="headerBlock__book")
+							picture(class="headerBlock__book")
+								img(src="img/headerBlock-book.png", alt="", loading="lazy")
 						.col-sm-7.col-md
 							+e.row.row.gy-2.gy-md-5
 								.col-auto
@@ -107,5 +110,6 @@ mixin headerBlock2()
 											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='1')
 					+formhead()
 				+e.book-col.col-lg-4.col-xl-5.d-none.d-lg-block
-					+pic('headerBlock-book.png')(class="headerBlock__book")
+					picture(class="headerBlock__book")
+						img(src="img/headerBlock-book.png", alt="", loading="lazy")
 	// end headerBlock

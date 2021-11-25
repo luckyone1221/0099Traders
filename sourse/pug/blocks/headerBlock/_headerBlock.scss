@@ -35,7 +35,7 @@
 	}
 	&--stock{
 		min-height: 1px !important;
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(lg) {
 
 				padding-bottom: 300px;
 			}
@@ -45,7 +45,7 @@
 			}
 		}
 		&::before{
-				@include media-breakpoint-up(sm) {
+				@include media-breakpoint-up(lg) {
 					
 					width: 80%;
 					clip-path: polygon(0 0, 100% 30%, 100% 75%, 0% 100%) !important;
@@ -65,7 +65,7 @@
 			width: 40%;
 			clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 58%);
 			background-color: $primary;
-			z-index: -1;
+			z-index: -3;
 		}
 		--num-back-col: #{$primary};
 	}
@@ -287,11 +287,11 @@
 			right: rem(42);
 			top: rem(-194);
 			width: rem(537 * 0.85);
-			height: rem(730 * 0.85);
+			// height: rem(730 * 0.85);
 		}
 		@include media-breakpoint-up(xl){
 			width: rem(537);
-			height: rem(730);
+			// height: rem(730);
 		}
 
 		img{
@@ -303,6 +303,7 @@
 			}
 			@include media-breakpoint-up(lg){
 				width: auto;
+				max-width: none;
 			}
 			height: auto;
 			max-width: 100%;

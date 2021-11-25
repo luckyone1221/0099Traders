@@ -222,14 +222,6 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.animateScroll();
-	
-	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
 
 	//luckyOne Js
 	let headerH;
@@ -293,7 +285,32 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 	});
-
+	
+	//
+	let sFeedbackSlider = new Swiper('.sFeedback-slider-js', {
+		slidesPerView: "auto",
+		spaceBetween: 32,
+		pagination: {
+			el: '.sFeedback--js .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	
+	//
+	let sRewSlider = new Swiper('.sRew__slider--js', {
+		slidesPerView: "auto",
+		spaceBetween: 32,
+		navigation: {
+			nextEl: '.sRew .swiper-button-next',
+			prevEl: '.sRew .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sRew .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

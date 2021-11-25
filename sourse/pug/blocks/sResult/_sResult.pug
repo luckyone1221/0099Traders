@@ -1,0 +1,49 @@
+mixin sResult(data)
+	// start sResult
+	+b.SECTION.sResult.section#sResult&attributes(attributes)
+		.container
+			+e.row.row.align-items-center.gy-2.gy-sm-5
+				+e.col--title.col-lg-5
+					+b.section-title
+						h2 Результат?
+				+e.col--red.col-lg-7
+					+e.img-box
+						+e.sub-row.row.align-items-center.gy-5
+							.col-sm-auto
+								+pic('sResult-img.png')(class="sResult__img")
+							.col-sm.order-first.order-sm-0
+								+e.i-txt Теперь за моими действиями наблюдали СОТНИ людей на&#160;сайте «Инфоклуб»
+					+e.red
+						span Через полтора года
+						span $1.000 долларов
+						span превратилась
+						span в $300.000
+			+e.graph-row.row
+				.col-lg-8
+					+e.graph
+						+e.g-title Апрель 2019 — Июнь 2020
+						+e.g-gray Начальный депозит: $1000
+						+e.g-img(href="img/svg/graph.svg" data-fancybox="graph")
+							img(loading="lazy" src="img/svg/graph.svg" alt="")
+				+e.sub-row-col.col-lg-4
+					+e.g-sub-row.row
+						+sResultItem('Подробный отчет по каждой сделке, начиная с апреля 2019 года здесь:', 'Смотреть сделки!')(href="#")
+						+sResultItem('Таблица-дневник торговли с результатом по каждой сделке:', 'Смотреть таблицу!')(href="#")
+			+e.book-row.row.gy-4.align-items-center
+				.col-md-auto
+					+pic('sResult-book.png')(class="sResult__book")
+				.col-md.pb-xl-3
+					+e.b-title Такое невозможно осуществить вручную! Как невозможно вырыть котлован для многоэтажного дома лопатой.
+					+e.b-gray
+						| Человек просто не способен на то, чтобы всегда находить идеальные точки входа, не ошибаться в 90% случаев и следить за всеми ликвидными валютными парами одновременно.
+						|
+						br.d-none.d-xl-block
+						| Такой результат стал возможен с помощью торгового робота, автоматического робота.
+
+	// end sResult
+
+mixin sResultItem(txt, btnTxt)
+	.col-md-6.col-lg-12
+		+e.item
+			+e.item-txt=txt
+			+e.item-btn&attributes(attributes)=btnTxt

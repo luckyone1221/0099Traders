@@ -1,0 +1,94 @@
+// start .sAuthor
+.sAuthor {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	background: #151515;
+	@include media-breakpoint-up(lg) {
+
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 91%, 20% 91%, 0% 86%);
+	}
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 96%, 20% 96%, 0% 90%);
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	.row{
+		position: relative;
+
+	}
+	h2{
+		color: #fff;
+		margin-bottom: 1em;
+		@include media-breakpoint-up(lg) {
+
+			position: absolute;
+			left: 15px;
+			top: 0;
+		}
+		max-width: rem(672);
+	}
+	img{
+
+		// margin-bottom: rem(40);
+	}
+		@include media-breakpoint-up(lg) {
+
+			ul{
+				padding-bottom: rem(40);
+			}
+		}
+	li{
+		list-style: none;
+		padding-left: rem(32 + 48);
+		position: relative;
+		margin-bottom: rem(45);
+		font-size: rem(16);
+		&::before{
+			content: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7.55556L6.92308 12L18 2' stroke='url(%23paint0_linear_8_152)' stroke-width='3'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_8_152' x1='10' y1='2' x2='17.7211' y2='5.0923' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF2171'/%3E%3Cstop offset='1' stop-color='%23C40248'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+			width: rem(48);
+			height: rem(48);
+			border-radius: 50%;
+			border: 1px solid $primary;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding-top: rem(5);
+		}
+		a{
+			display: inline-block;
+			margin-top: rem(10);
+			max-width: rem(300);
+		}
+	}
+	img{
+		// margin-bottom: rem(83);
+	}
+	&__col{
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: space-between;
+		align-self: flex-end;
+		position: relative;
+	}
+	.img-graf{
+		position: absolute;
+		right: 0;
+		transform: rotateX(180deg);
+		z-index: -1;
+		@include media-breakpoint-up(sm) {
+
+			bottom: -30%;
+		}
+		bottom: -90%;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAuthor

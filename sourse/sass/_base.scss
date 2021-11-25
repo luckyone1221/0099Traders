@@ -322,16 +322,25 @@ ul {
 	width: 100%;
 	text-align: center;
 
+	@include media-breakpoint-up(lg){
+		padding: 0 rem(19);
+	}
+
 	&-bullet {
 		opacity: 1;
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		background-color: #E6E6E6;
+		background-color: #C4C4C4;
 		outline: none !important;
 		@include mt;
+
 		margin-left: rem(4);
 		padding-right: rem(4);
+		@include media-breakpoint-up(lg){
+			margin-left: rem(13.5);
+			margin-right: rem(13.5);
+		}
 		display: inline-block;
 
 		&-active,
@@ -528,6 +537,10 @@ iframe {
 
 	background: linear-gradient(104.05deg, #FF2171 39.99%, #C40248 84.78%);
 	box-shadow: 0px 4px 37px rgba(255, 33, 113, 0.63), 0px 11px 14px rgba(0, 0, 0, 0.25);
+	&:hover{
+		box-shadow: 0px 4px 37px rgba(255, 33, 113, 0.2), 0px 11px 14px rgba(0, 0, 0, 0.2);
+		opacity: .95;
+	}
 }
 
 

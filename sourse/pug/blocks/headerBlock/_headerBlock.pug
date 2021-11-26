@@ -14,12 +14,12 @@ mixin formhead()
 		+input('Ваш E-mail', 'email')
 		+e.row.row.gy-4
 			.col-sm-auto
-				+e.btn(type="submit") Получить доступ
+				+e.btn(type="submit").disabled Получить доступ
 			.col-sm
 				+e.sub-row.row
 					.col-auto
 						+e.LABEL.chb
-							input(class="invisible" type="checkbox" checked)
+							input(class="invisible" type="checkbox" )
 							.square
 								//-checked
 					.col

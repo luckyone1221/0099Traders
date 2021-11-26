@@ -51,7 +51,7 @@ mixin sFeedbackSlide(data)
 						+pic(`sFeedback-${data.imgNum}.jpg`,'',0)
 					+e.name=data.name
 					if data.link
-						+e.btn(href= data.link target="_blank") Смотреть стейтмент
+					+e.btn(href= data.link target="_blank") Смотреть стейтмент
 					+e.hint Нажмите, чтобы раскрыть
 				+e.col--img.col-lg-6
 					+e.link(href=`img/@2x/sFeedback-img-${data.imgNum}.png` data-fancybox="sFeedback-imgs").bg-wrap

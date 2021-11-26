@@ -259,7 +259,8 @@
 				color: $primary;
 			}
 			span{
-				text-decoration: underline;
+				// text-decoration: underline;
+				border-bottom: 1px solid ;
 			}
 		}
 		&__{}

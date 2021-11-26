@@ -214,6 +214,21 @@ function eventHandler() {
 		},
 	});
 
+	let form = document.querySelectorAll(".form-wrap");
+	form.forEach((el) => {
+		const input = el.querySelector('input.invisible');
+		const btn = el.querySelector('.form-wrap__btn');
+		input.addEventListener('change', (event) => {
+ 
+			if (input.checked) {
+				btn.classList.remove("disabled");
+			}
+			else {
+				btn.classList.add("disabled");
+			} 
+		})
+	}) 
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

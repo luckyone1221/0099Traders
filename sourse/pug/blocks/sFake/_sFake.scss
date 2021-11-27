@@ -64,15 +64,19 @@
 	}
 	// }
 	@include media-breakpoint-up(xxl){
-			min-height: 700px;
-			margin-top: rem(-90);
-			// margin-bottom: rem(-33px);
-		}
-
-		width: 100%;
-		height: auto;
-		img{
+		min-height: 720px;
+		margin-top: rem(-90);
+		// margin-bottom: rem(-33px);
+	}
+	
+	width: 100%;
+	height: auto;
+	img{
+			@include media-breakpoint-up(xl){
 			// width: 100%;
+				max-width: none;
+				width: auto;
+		}
 		}
 	}
 	&__box-bot{

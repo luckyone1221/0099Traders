@@ -298,6 +298,10 @@ ul {
 }
 .swiper-button-hand-prev,
 .swiper-button-hand-next{
+	&.swiper-button-disabled{
+		opacity: 0;
+		cursor: default
+	}
 	@include mt();
 	width: rem(36.5);
 	height: rem(24);

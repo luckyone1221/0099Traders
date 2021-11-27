@@ -12,6 +12,7 @@
 	max-width: 100%;
 	position: relative;
 	width: 100%;
+	width: 600px;
 	// min-height: 100%; 
 	padding: 40px;
 
@@ -143,6 +144,12 @@ a {
 		min-height: 100%; 
 		transform: none !important;
 	}
+	.fancybox__track{
+		&::before,
+		&::after{
+			display: none;
+		}
+	}
 }
 
 
@@ -240,9 +247,9 @@ a {
 
 }
 
-.modal-win--steps{
-	width: 600px;
-	padding: 30px;
+.modal-win--form{
+	
+	padding: 30px  20px;
 	.tmr_el{
 		color: $body-color;
 	}

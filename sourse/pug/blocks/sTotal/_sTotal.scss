@@ -57,6 +57,17 @@
 	.btn{
 		margin-top: rem(72);
 	}
+	.picture-bg{
+		overflow: hidden;
+		img{
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			max-width: 110%;
+			object-fit: none;
+			width: auto;
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

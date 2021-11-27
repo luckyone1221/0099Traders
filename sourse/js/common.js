@@ -89,6 +89,14 @@ const JSCCommon = {
 				scrollTop: $($(this).attr("href")).offset().top - 280
 			}, 2000);
 		})
+		
+		$('  .scroll-links').click(function(e){
+			e.preventDefault();
+			$([document.documentElement, document.body]).animate({
+				scrollTop: $($(this).attr("href")).offset().top  
+			}, 2000);
+		})
+
 	}, 
 };
 const $ = jQuery;

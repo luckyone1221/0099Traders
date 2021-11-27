@@ -35,12 +35,14 @@
 			width: rem(80);
 		}
 		@include media-breakpoint-up(lg){
-			width: rem(367);
-			height: rem(451);
+			// width: rem(367);
+			width: auto;
+			// height: rem(451);
 			top: rem(-120);
 		}
 		@include media-breakpoint-up(xl){
 			top: rem(-170);
+
 			right: rem(-24);
 		}
 

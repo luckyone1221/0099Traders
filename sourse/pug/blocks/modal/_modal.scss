@@ -239,3 +239,38 @@ a {
 	color: #fff !important; 
 
 }
+
+.modal-win--steps{
+	width: 600px;
+	padding: 30px;
+	.tmr_el{
+		color: $body-color;
+	}
+	.tmr_el_val { 
+			background-color: primary !important;
+			&:before{ 
+			}
+		}
+
+			.tmr_el_val{
+		// position: relative;
+		// width: rem(68);
+		// height: rem(68);
+		// line-height: rem(68);
+		color: $white;
+		background-color: $primary;
+
+		// @include rfs(40px);
+		// border-radius: rem(10px);
+		// padding: 0;
+		// font-weight: 400;
+	}
+
+	.tmr_el_unit{
+		color: #000;
+	}
+	.time__block .idvd_timer{
+		margin-bottom: 1rem;
+		justify-content: center;
+	}
+}

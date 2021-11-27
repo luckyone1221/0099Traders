@@ -51,7 +51,7 @@ mixin headerBlock()
 			+b.section-title
 				h1 Начните зарабатывать на&#160;FOREX сегодня
 				p MasterTrade PRO 2.0 — это автоматический робот, который увеличивает Ваш депозит в десятки раз за год без заоблачных рисков
-			//+pic('headerBlock-book.png')(class="headerBlock__book d-lg-none")
+			//- +pic('headerBlock-book.png')(class="headerBlock__book d-lg-none")
 			+e.main-row.row
 				+e.mob-col.col-lg-8.col-xl-7
 					+e.mob-row.row
@@ -70,7 +70,28 @@ mixin headerBlock()
 									+e.timer
 										.time__block
 											.idvd_timer.autostart(data-redirect_url='', data-duration_hours='1')
+					
 					+formhead()
+
+					// второй вариант формы
+					a.btn.btn-lg.btn-default.w-100(href="#modal-form").link-modal-js  Получить доступ
+					div(id="modal-form" style="display: none")
+						+b.modal-win--steps
+							.text-center
+								.h5 Заполните форму и получите 
+									.text-primary план на первую неделю!
+
+								p.text-secondary Не откладывай на завтра то, что можно начать сегодня!
+
+								p Цена прямо сейчас: 
+									strong.h5 29 ₽
+
+								p Предложение действует:
+								+e.timer
+										.time__block
+											.idvd_timer.autostart(data-duration_hours='1', data-redirect_url='')
+							+formhead()
+					// /второй вариант формы
 				+e.book-col.col-lg-4.col-xl-5
 					picture(class="headerBlock__book")
 						img(src="img/headerBlock-book.png" loading="lazy", alt="")

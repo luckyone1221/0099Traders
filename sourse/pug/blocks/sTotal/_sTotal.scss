@@ -3,6 +3,11 @@
 		// --sPT: ;
 		// --sPB: ;
 		--sTPB: #{rem(80)};
+		position: relative;
+		z-index: 4;
+		.btn:not(:hover){
+			background-color: #fff;
+		}
 
 		h2{ 
 		span{ 

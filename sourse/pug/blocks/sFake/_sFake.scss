@@ -66,20 +66,21 @@
 	@include media-breakpoint-up(xxl){
 			min-height: 700px;
 			margin-top: rem(-90);
-			margin-bottom: rem(-33px);
+			// margin-bottom: rem(-33px);
 		}
 
 		width: 100%;
 		height: auto;
 		img{
-			width: 100%;
+			// width: 100%;
 		}
 	}
 	&__box-bot{
 		position: relative;
 		z-index: 2;
 		display: flex;
-		align-items: center;
+		// align-items: center;
+		margin-top: -.56em;
 
 		&:before,
 		&:after{
@@ -89,6 +90,8 @@
 			height: 3px;
 			width: auto;
 			flex-grow: 1;
+			position: relative;
+			top: .5em;
 		}
 
 		span{

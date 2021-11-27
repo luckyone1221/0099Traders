@@ -3,6 +3,8 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		position: relative;
+		z-index: 5;
 	h2{
 		span{
 			&::after{

@@ -154,8 +154,8 @@ a {
 @include media-breakpoint-down(sm) {
 	.fancybox__slide{
 		max-height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
+		// overflow-x: hidden;
+		// overflow-y: auto;
 	}
 	.fancybox__slide::before, .fancybox__slide::after{
 		display: none;

@@ -237,6 +237,19 @@ function eventHandler() {
 		})
 	}) 
 
+	var $htmlOrBody = $('.fancybox__slide '), // scrollTop works on <body> for some browsers, <html> for others
+		scrollTopPadding = 8;
+
+	$('#modal-form .form-control').blur(function () {
+		// get textarea's offset top position
+		var textareaTop = $(this).offset().top;
+		console.log(this);
+		// scroll to the textarea
+		$htmlOrBody.scrollTop(textareaTop + scrollTopPadding);
+		console.log($htmlOrBody);
+	});
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

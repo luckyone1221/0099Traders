@@ -138,7 +138,7 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {
-
+	
 	.fancybox__container {
 		width: 100% !important;
 		min-height: 100%; 
@@ -149,6 +149,20 @@ a {
 		&::after{
 			display: none;
 		}
+	}
+}
+@include media-breakpoint-down(xs) {
+	.fancybox__slide{
+		max-height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.fancybox__slide::before, .fancybox__slide::after{
+		display: none;
+	}
+	.fancybox__container{
+		top: initial;
+		// max-height: 100%;
 	}
 }
 

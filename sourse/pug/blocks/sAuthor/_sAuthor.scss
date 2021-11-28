@@ -28,8 +28,11 @@
 		max-width: rem(672);
 	}
 	img{
-		max-width: none;
+		@include media-breakpoint-down(sm) {
+			max-width: none;
+		}
 		@include media-breakpoint-up(xl) {
+			max-width: none;
 		}
 
 		// margin-bottom: rem(40);

@@ -137,7 +137,7 @@ a {
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
 	
 	.fancybox__container {
 		width: 100% !important;
@@ -151,7 +151,7 @@ a {
 		}
 	}
 }
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
 	.fancybox__slide{
 		max-height: 100vh;
 		overflow-x: hidden;
@@ -255,8 +255,13 @@ a {
 	@extend .btn, .btn-primary;
 	padding: 0;
 	border-radius: 0;
-	top: -5px;
-	right: -5px;
+	@include media-breakpoint-up(lg) {
+
+		top: -5px;
+		right: -5px;
+	}
+	top: 0;
+	right: 0;
 	color: #fff !important; 
 
 }
@@ -294,4 +299,59 @@ a {
 		margin-bottom: 1rem;
 		justify-content: center;
 	}
+}
+
+.modal-win--strategy{
+	padding: rem(32px);
+	width: 1216px;
+	.row{
+		// --bs-gutter-x: var(--bs-gutter-y);
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+}
+.strategy-item{
+	background: #F3F3F3;
+	&__body,
+	&__footer{
+
+		padding: 26px;
+	}
+	min-height: 100%;
+	&__footer{
+		padding-bottom: 0;
+		border-top: 1px solid rgba($color: #000000, $alpha: .2);
+
+	}
+	&.dark{
+		color: #fff;
+		background: #000000;
+	}
+	&__title{
+		font-size: rem(24);
+		margin-bottom: rem(10);
+		strong{
+			
+			font-weight: 600;
+		}
+	}
+	p{
+		font-size: rem(16);
+	}
+	.text-primary{
+
+	}
+	&__footer{
+		font-size: rem(14);
+		p{
+			margin-bottom: 0;
+		}
+		.row{
+			--bs-gutter-x: #{rem(20)};
+		}
+		padding-bottom: rem(20px);
+		.col{
+			font-size: rem(12);
+		}
+	}
+
 }

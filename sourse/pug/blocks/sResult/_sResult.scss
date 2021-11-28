@@ -27,6 +27,17 @@
 		}
 	}
 	.section-title{
+		&--mob{
+			@include media-breakpoint-down(lg){
+				background-color: $body-color;
+				color: #fff;
+				padding-left: .9rem;
+				padding-right: .9rem;
+				margin-left: -.9rem;
+				display: inline-block;
+				min-width: rem(450);
+			}
+		}
 		padding-bottom: 0;
 		@include media-breakpoint-up(xl){
 			position: relative;

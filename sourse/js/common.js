@@ -14,8 +14,8 @@ const JSCCommon = {
 			touch: false,
 			infinite: false,
 			dragToClose: false,
-			type: 'inline',
-			autoFocus: false,
+			// type: 'inline',
+			autoFocus: true,
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",

@@ -3,6 +3,7 @@
 	position: relative;
 	z-index: 2;
 	color: $white;
+	background-color: #f6f7f9;
 
 	--sPT: calc(var(--header-h, 120px) + #{rem(19.5)});
 	--sTPB: #{rem(43)};

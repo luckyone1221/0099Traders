@@ -246,6 +246,13 @@
 					}
 			}
 	}
+
+
+	.btn-default.w-100{
+		@include media-breakpoint-up(lg){
+			max-width: rem(615);
+		}
+	}
 }
 
 // end.headerBlock

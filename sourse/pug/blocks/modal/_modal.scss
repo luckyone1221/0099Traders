@@ -144,7 +144,7 @@ a {
 		// min-height: 100%; 
 		// transform: none !important;
 	}
-	.fancybox__track{
+	.has-inline .fancybox__track{
 		&::before,
 		&::after{
 			display: none;
@@ -157,9 +157,10 @@ a {
 		// overflow-x: hidden;
 		// overflow-y: auto;
 	}
-	.fancybox__slide::before, .fancybox__slide::after{
+ 
+	.has-inline::before, .has-inline::after{
 		display: none;
-	}
+	} 
 	.fancybox__container{
 		// top: initial;
 		// max-height: 100%;

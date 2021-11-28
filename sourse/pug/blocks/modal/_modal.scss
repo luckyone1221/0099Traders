@@ -140,9 +140,9 @@ a {
 @include media-breakpoint-down(sm) {
 	
 	.fancybox__container {
-		width: 100% !important;
-		min-height: 100%; 
-		transform: none !important;
+		// width: 100% !important;
+		// min-height: 100%; 
+		// transform: none !important;
 	}
 	.fancybox__track{
 		&::before,
@@ -153,7 +153,7 @@ a {
 }
 @include media-breakpoint-down(sm) {
 	.fancybox__slide{
-		max-height: 100vh;
+		// max-height: 100vh;
 		// overflow-x: hidden;
 		// overflow-y: auto;
 	}
@@ -161,7 +161,7 @@ a {
 		display: none;
 	}
 	.fancybox__container{
-		top: initial;
+		// top: initial;
 		// max-height: 100%;
 	}
 }

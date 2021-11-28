@@ -101,14 +101,10 @@ const JSCCommon = {
 };
 const $ = jQuery;
 
-function eventHandler() {
-	// JSCCommon.ifie();
+function eventHandler() { 
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume();
-	// JSCCommon.inputMask();
-	// JSCCommon.sendForm();
-	JSCCommon.heightwindow();
-	// JSCCommon.makeDDGroup();
+	JSCCommon.tabscostume(); 
+	JSCCommon.heightwindow(); 
 	JSCCommon.animateScroll();
 
 	//luckyOne Js
